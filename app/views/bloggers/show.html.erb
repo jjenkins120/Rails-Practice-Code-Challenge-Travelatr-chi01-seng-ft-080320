@@ -1,0 +1,11 @@
+<h1><%= @blogger.name %></h1>
+
+<h2>My Total Likes: <%= @blogger.total_likes %> </h2>
+<h2> <%= link_to "Title: #{@featured_post.title} Likes: #{@featured_post.likes}", post_path(@featured_post.id) %> </h2>
+
+<ol>Top 5 Destinations:<% @destination_most_posts.each do |destination_instance|%>
+<li><%= "#{destination_instance.name}, #{destination_instance.country}" %>
+<% end%>
+</ol>
+
+

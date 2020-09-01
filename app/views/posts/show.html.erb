@@ -1,0 +1,12 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.content%></p>
+
+
+<br><%= @post.likes %>
+
+<br><%= link_to @post.blogger.name, blogger_path(@post.blogger.id) %>
+<br><%= link_to @post.destination.name, destination_path(@post.destination.id) %>
+
+<%= button_to "Add Like", post_path(@post.id), {method: add_like} %>
+
+<%# {method: @post.add_like} %>

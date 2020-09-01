@@ -1,0 +1,11 @@
+<h1>Destinations#show</h1>
+<p>Find me in app/views/destinations/show.html.erb</p>
+
+<ol><% @top_five_most_recent.each do |post_instance| %>
+<li><%= "Title: #{post_instance.title} Updated: #{post_instance.updated_at} "%>
+<%end%>
+</ol>
+
+<%= link_to @featured_post.title, post_path(@featured_post.id) %>
+<br>
+<br>Blogger average age: <%= @destination.blogger_ave_age %>
